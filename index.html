@@ -20,27 +20,27 @@ body{
   letter-spacing: 5px;
 }
 
-.days, .hours, .minutes, .seconds {
+.tage, .stunden, .minuten, .sekunden {
   display: inline-block;
   padding: 20px;
   width: 100px;
   border-radius: 5px;
 }
 
-.days {
+.tage {
   background: #EF2F3C;
 }
 
-.hours {
+.stunden {
   background: #eeeeee;
   color: #183059;
 }
 
-.minutes {
+.minuten {
   background: #276FBF;
 }
 
-.seconds {
+.sekunden {
   background: #F0A202;
 }
 
@@ -88,14 +88,14 @@ body{
     
 <div id="timer">
 
-    <div class="days"> 
-        <div id="days" class="numbers "> </div>days</div> 
-      <div class="hours"> 
-        <div  id="hours" class="numbers"> </div>hours</div> 
-      <div class="minutes"> 
-        <div  id="minutes" class="numbers"> </div>minutes</div> 
-      <div   class="seconds"> 
-        <div id="seconds" class="numbers"> </div>seconds</div> 
+    <div class="tage"> 
+        <div id="tage" class="numbers "> </div>days</div> 
+      <div class="stunden"> 
+        <div  id="stunden" class="numbers"> </div>hours</div> 
+      <div class="minuten"> 
+        <div  id="minuten" class="numbers"> </div>minutes</div> 
+      <div   class="sekunden"> 
+        <div id="sekunden" class="numbers"> </div>seconds</div> 
       </div>
 
 </div>
@@ -116,16 +116,16 @@ let timer = setInterval(function() {
   const diff = myDate - today;
 
   // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  let Tage = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let Stunden = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let Minuten = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let Sekunden = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
-  document.getElementById("days").innerHTML=days
-  document.getElementById("hours").innerHTML=hours
-  document.getElementById("minutes").innerHTML=minutes
-  document.getElementById("seconds").innerHTML=seconds
+  document.getElementById("tage").innerHTML=tage
+  document.getElementById("stunden").innerHTML=stunden
+  document.getElementById("minuten").innerHTML=minuten
+  document.getElementById("sekunden").innerHTML=sekunden
 
 
 
